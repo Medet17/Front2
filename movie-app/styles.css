@@ -1,0 +1,272 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; 
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #282c34;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left h1 {
+  font-size: 1.8rem;
+  margin-right: 2rem;
+  color: #61dafb;
+}
+
+.nav-left h1 span {
+  font-weight: 400;
+}
+
+.watchlist,
+#contact-button,
+#close-details,
+#add-to-watchlist,
+#close-watchlist
+ {
+  padding: 0.5rem 1rem;
+  background-color: hsl(217, 89%, 49%);
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.watchlist:hover,
+#contact-button:hover,
+#close-details:hover,
+#add-to-watchlist:hover {
+  background-color: #21a1f1;
+}
+
+nav i {
+  font-size: 1.2rem;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav i:hover {
+  color: #61dafb;
+}
+
+
+main {
+  padding: 2rem;
+}
+
+#movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+#movie-details,
+#watchlist-modal {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+#watchlist-modal .movie-card img {
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+
+}
+button {
+  cursor: pointer;
+}
+
+/* Suggestions */
+#suggestions {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+#suggestions div {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: black;
+}
+
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+.movie-card {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+#movie-content {
+  column-gap: 20px;
+  justify-content: space-between;
+}
+
+#movie-content iframe {
+  margin: 60px;
+}
+
+.movie-card img {
+  width: 60%;
+  height: 60%;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-background {
+  display: none;
+}
+
+.watchlist {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.watchlist i {
+  margin-right: 0.5rem;
+}
+
+.watchlist:hover {
+  color: #61dafb;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#search-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+#search-input::placeholder {
+  color: #aaa;
+}
+/* Media queries that makes it reponsive */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+
+  .nav-left h1 {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  .nav-right {
+    margin-top: 0.5rem;
+  }
+
+  #movies-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  #movie-content iframe {
+    height: 250px;
+  }
+  .movie-card img {
+    width: 60%;
+    border-radius: 5px;
+  }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 480px) {
+  header {
+    padding: 0.5rem;
+  }
+
+  .nav-left h1 {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0.5rem;
+  }
+
+  #search-input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  #movies-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .movie-card img {
+    width: 100%;
+    border-radius: 5px;
+
+  }
+
+  #movie-content iframe {
+    height: 200px;
+
+  }
+
+  button,
+  .watchlist,
+  #contact-button,
+  #close-details,
+  #add-to-watchlist,
+  #close-watchlist {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  #movie-details,
+  #watchlist-modal {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <h1 id="tit">Recipe App</h1>
+        <div class="favorites" id="favorites-button">
+          <i class="fas fa-heart"></i>
+          <span>Favorites</span>
+        </div>
+      </div>
+      <div class="nav-right">
+        <input type="text" id="search-input" placeholder="Search for recipes...">
+        <i class="fas fa-search"></i>
+      </div>
+    </nav>
+    <div id="suggestions" class="hidden"></div>
+  </header>
+
+  <main>
+    <div id="favorites-modal" class="hidden">
+      <button id="close-favorites">Close</button>
+      <div id="favorites-list"></div>
+    </div>
+    <div id="favtext" class="hiiden">
+      
+    </div>
+    <div id="recipes-grid"></div>
+    <div id="recipe-details" class="hidden">
+      <button id="close-details">Close</button>
+      <div id="recipe-content"></div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

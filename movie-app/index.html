@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title onclick="window.location.reload">Movies App </title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <h1>Movies App</h1>
+        <div class="watchlist" id="watchlist-button">
+          <i class="fas fa-bookmark" style="color:white;"></i>
+          <span>Watchlist</span>
+        </div>
+      </div>
+      <div class="nav-right">
+        <input type="text" id="search-input" placeholder="Search movies...">
+        <i class="fas fa-search"></i>
+        <button id="contact-button">Contact</button>
+      </div>
+    </nav>
+    
+
+    <div id="suggestions" class="hidden"></div>
+  </header>
+
+  <main>
+    
+    <div id="movies-grid"></div>
+    
+    <div id="movie-details" class="hidden">
+      <button id="close-details">Close</button>
+      <div id="movie-content"></div>
+    </div>
+    <div id="watchlist-modal" class="hidden">
+      <button id="close-watchlist">Close Watchlist</button>
+      <div id="watchlist-content"></div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
